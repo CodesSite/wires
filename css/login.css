@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Roboto, sans-serif;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #D6E4E5;
+	min-height: 100vh;
+}
+
+.logo{
+	display: block;
+	text-align: center;
+	font-family:Rondalo;
+	font-weight:500;
+	font-size:45px;
+	text-decoration: none;
+	color: #000;
+}
+
+.logo sup{
+	font-size: 13px;
+	font-weight: normal;	
+}
+
+.button{
+	margin: 30px 15px 0 15px;
+	font-size: 15px;
+	font-family: Roboto, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 50px;
+	background: #fff;
+	border-radius: 25px;
+	border: none;
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.button:hover{
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(34, 60, 80, 0.2);
+	box-shadow: 0px 0px 14px 0px rgba(34, 60, 80, 0.2);
+	transform: translateY(-1px);
+	transition: 0.3s;
+}
+
+input, select{
+	margin: 30px 15px 0 15px;
+	padding-left: 20px;
+	width: 200px;
+	height: 50px;
+	border-radius: 25px;
+	border: none;
+	font-size: 15px;
+	background: #fff;
+	color: #9A9A9A;
+}
+
+.container-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.repair-password{
+	color: #000;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin: 30px 0 0 0;
+    transition: .2s;
+}
+
+.repair-password:hover{ color: #0077C0; }
+
+@font-face {
+	font-family:Rondalo;
+	src:url(font/RondaloRegular.ttf);
+}

@@ -1,0 +1,368 @@
+.row{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 30px;
+}
+
+.row__news{
+	display: grid;
+	margin-top: 30px;
+	grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+	justify-items: center;
+	grid-row-gap: 50px;
+	grid-column-gap: 30px;
+}
+
+.row__profile{
+	display: grid;
+	margin-top: 30px;
+	grid-template-columns: 50% 50%;
+	grid-row-gap: 25px;
+	grid-column-gap: 30px;
+}
+
+.row__user{
+	display: grid;
+	margin-top: 30px;
+	grid-template-columns: 22.5% 22.5% 22.5% 22.5%;
+	grid-row-gap: 50px;
+	grid-column-gap: 30px;
+}
+
+.row__website__left{
+	display: grid;
+	margin-top: 30px;
+	grid-template-columns: 25% 75%;
+	grid-row-gap: 25px;
+	grid-column-gap: 30px;
+}
+
+.row__website__right{
+	display: grid;
+	margin-top: 30px;
+	grid-template-columns: 75% 25%;
+	grid-row-gap: 25px;
+	grid-column-gap: 30px;
+}
+
+.row__form{
+	display: grid;
+	grid-template-columns: 60% 40%;
+}
+
+.row__categoria{
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+}
+
+.row__contact{
+	display: grid;
+	grid-template-columns: 65% 35%;
+	justify-content: space-around;
+}
+
+/*Сортировка за пріоритетом*/
+
+@media only screen and (max-width: 320px) {
+	/*Grid System*/
+	.row,
+	.row__categoria,
+	.row__profile,
+	.row__contact {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	/*Пов'язано з меню (окрім .section-write .no-write)*/
+	.header-button,
+	.section-write {
+		display: none;
+	}
+
+	.wrapper {
+		left: -290px;
+	}
+
+	.section {
+		left: 0;
+	}
+
+	.nav-toggler,
+	.icon-home,
+	.no-write,
+	.post {
+		display: block;
+	}
+
+	.nav-toggler.open{ 
+		width: 50px; 
+		height: 50px; 
+		background: url(../img/icons/dark/close.png) no-repeat center; 
+	}
+
+	#wrapper-button.open,
+	.wrapper.open {
+		display: block;
+		z-index: 9999;
+		-webkit-animation: slideSectionLeft 1s ease;
+		animation: slideSectionLeft 1s ease;
+	}
+
+	/*Головна (публікації)*/
+	.col-news img,
+	.col-news-sidebar img,
+	.content-post img {
+		width: 100%;
+		height: auto;
+	}
+
+	.col-news,
+	.col-news-sidebar,
+	.background {
+		width: auto;
+		height: auto;
+	}
+
+	/*post.php*/
+	.info-comm img{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	/*Контакти*/
+	.social-media,
+	.work {
+		padding: 0;
+	}
+
+	/*Іконки*/
+	.fab {
+		font-size: 25px;
+	}
+}
+
+@media only screen and (min-width:  320px) and (max-width:  425px){
+	/*Grid System*/
+	.row, .row__news, 
+	.row__categoria,
+	.row__profile,
+	.row__contact{ 
+		grid-template-columns: repeat(1, 1fr); 
+	}
+
+	/*Пов'язано з меню (окрім .section-write .no-write)*/
+	.header-button, 
+	.wrapper,
+	.section-write{ 
+		display: none 
+	}
+
+	.nav-toggler, 
+	.icon-home,
+	.no-write,
+	.post{ 
+		display: block; 
+	}
+
+	.nav-toggler.open{ background: url(../img/icons/dark/close.png) no-repeat center;  }
+
+	#wrapper-button.open, 
+	.wrapper.open{ 
+		display: block; 
+		z-index: 9999; 
+		-webkit-animation: slideSectionLeft 1s ease; 
+		animation: slideSectionLeft 1s ease;
+	}
+
+	.section{ left: 0; }
+
+	/*Головна (публікації)*/
+	.col-news img,
+	.col-news-sidebar img { 
+		width: 100%; 
+		height: auto; 
+	}
+
+	.col-news,
+	.col-news-sidebar, 
+	.background{ 
+		width: auto; 
+		height: auto; 
+	}
+
+	.content-post img{ 
+		width: 250px; 
+		height: auto; 
+	}
+
+	/*post.php*/
+	.info-comm img{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	/*Контакти*/
+	.social-media, .work{ padding: 0; }
+}
+
+@media only screen and (min-width:  425px) and (max-width: 768px){
+	/*Grid System*/
+	.row, 
+	.row__news, 
+	.row__categoria{ 
+		grid-template-columns: repeat(auto-fill, minmax(425px, 2fr)); 
+	}
+
+	.row,
+	.row__contact{ 
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+
+	/*Блоки для яких встановлено display: none;*/
+	.header-button, 
+	.wrapper, 
+	.section-write{ 
+		display: none 
+	}
+
+	/*Блоки для яких встановлено display: block;*/
+	.mobile-nav, 
+	.post, 
+	.info-post,
+	.nav-toggler, 
+	.icon-home, 
+	.no-write{ display: block; }
+
+	/*Пов'язано з меню*/
+	.nav-toggler.open{ background: url(../img/icons/dark/close.png) no-repeat center; }
+
+	#wrapper-button.open, 
+	.wrapper.open{ 
+		display: block; 
+		z-index: 9999; 
+		-webkit-animation: slideSectionLeft 1s ease; 
+		animation: slideSectionLeft 1s ease;
+	}
+
+	/*Головна (публікації)*/
+	.col-news img { 
+		width: 100%; 
+		height: auto; 
+	}
+
+	.col-news, 
+	.background { 
+		width: auto; 
+		height: auto; 
+	}
+
+	.content-post img{ 
+		width: 350px; 
+		height: auto; 
+	}
+
+	.section{ left: 0; }
+
+	.info-post a{ margin-left: 10px; }
+
+	/*post.php*/
+	.sidebar{ margin: 0; }
+
+	.info-comm img{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	/*Контакти*/
+	.social-media, .work{ padding: 0; }
+
+	.work .background{ 
+		display: flex; 
+		justify-content: space-around; 
+	}
+}
+
+@media only screen and (min-width:  768px) and (max-width:  1200px){
+	/*Grid System*/
+	.row__news, 
+	.row__contact{ 
+		grid-template-columns: repeat(1, 1fr); 
+	}
+
+	.row__categoria{ grid-template-columns: repeat(2, 1fr); }
+
+	/*Блоки для яких встановлено display: none; (в основному свойства застосовуються для меню)*/
+	.header-button:not(.header-button-add), 
+	#wrapper-button,
+	.no-write,
+	.wrapper-adaption{ 
+		display: none; 
+	}
+
+	/*Блоки для яких встановлено display: block;*/
+	.icon-home,
+	.section-write,
+	.profile,
+	.nav-toggler,
+	.post{ display: block; }
+
+	/*Пов'язано з меню*/
+	.nav-toggler.open{ background: url(../img/icons/dark/close.png) no-repeat center; }
+
+	#wrapper-button.open, 
+	.wrapper.open{ 
+		display: block; 
+		z-index: 9999; 
+		-webkit-animation: slideSectionLeft 1s ease; 
+		animation: slideSectionLeft 1s ease;
+	}
+
+	/*Головна (публікації)*/
+	.col-news img { 
+		width: 100%; 
+		height: auto; 
+	}
+ 
+	.col-news, .background { 
+		width: auto; 
+		height: auto; 
+	}
+
+	.content-post img{ 
+		width: 550px; 
+		height: auto; 
+	}
+
+	/*post.php*/
+	.info-comm img{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+
+	/*Контакти*/
+	.social-media, .work{ margin: 0; }
+
+	.work .background{ 
+		display: flex; 
+		justify-content: space-around; 
+	}
+
+}
+
+@media only screen and (min-width: 1200px){
+	/*Блоки для яких встановлено display: none;*/
+	#wrapper-button, 
+	.mobile-nav,
+	.no-write,
+	.wrapper-adaption{ 
+		display: none; 
+	}
+
+	/*Блоки для яких встановлено display: block;*/
+	.section-write{ display: block; }
+
+}
